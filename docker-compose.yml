@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  azurite:
+    container_name: azurite_container
+    image: azurite-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TERM=xterm-256color
+    volumes:
+      - ../azurite-cs:/azurite-cs
+      - ../azullvm:/azullvm
+      - ../AZIR:/AZIR
+      - ../AZVM:/AZVM
+      - ../azurite-examples:/azurite/examples
+    working_dir: /azurite
