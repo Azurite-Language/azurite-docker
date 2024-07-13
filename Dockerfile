@@ -21,10 +21,10 @@ RUN rm -rf /var/lib/apt/lists/*
 
 COPY ".bashrc" "/root/.bashrc"
 
-ENV PATH "$PATH:/AZVM:/AZIR:/azurite-cs/bin"
+ENV PATH "$PATH:/AZVM/bin:/AZIR/bin:/azurite-cs/bin:/azullvm/bin"
 
 COPY "Makefile" "/azurite/Makefile"
-
+COPY "build.sh" "/azurite/build.sh"
 
 WORKDIR /azurite
 

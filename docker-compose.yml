@@ -15,4 +15,5 @@ services:
       - ../AZIR:/AZIR
       - ../AZVM:/AZVM
       - ../azurite-examples:/azurite/examples
+      - ../azurite-stdlib:/root/.azurite
     working_dir: /azurite
